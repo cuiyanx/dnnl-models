@@ -1,0 +1,1897 @@
+name: "tf2onnx_predict"
+op {
+  input: "input:0"
+  input: "MobilenetV1/Conv2d_0/weights/read/_4__cf__4:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_0/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_0/Relu6:0"
+  name: "Conv__224"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 2
+    ints: 2
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "X_scale"
+    f: 0.007874015718698502
+  }
+  arg {
+    name: "X_zero_point"
+    i: 128
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_0/Relu6:0"
+  input: "Const__219:0"
+  input: "MobilenetV1/Conv2d_1_depthwise/BatchNorm/beta/read/_45__cf__45:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6:0"
+  name: "MobilenetV1/MobilenetV1/Conv2d_1_depthwise/depthwise"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 32
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6:0"
+  input: "MobilenetV1/Conv2d_1_pointwise/weights/read/_54__cf__54:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6:0"
+  name: "Conv__226"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6:0"
+  input: "Const__218:0"
+  input: "MobilenetV1/Conv2d_2_depthwise/BatchNorm/beta/read/_55__cf__55:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6:0"
+  name: "MobilenetV1/MobilenetV1/Conv2d_2_depthwise/depthwise"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 64
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 2
+    ints: 2
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6:0"
+  input: "MobilenetV1/Conv2d_2_pointwise/weights/read/_64__cf__64:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6:0"
+  name: "Conv__228"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6:0"
+  input: "Const__217:0"
+  input: "MobilenetV1/Conv2d_3_depthwise/BatchNorm/beta/read/_65__cf__65:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6:0"
+  name: "MobilenetV1/MobilenetV1/Conv2d_3_depthwise/depthwise"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 128
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6:0"
+  input: "MobilenetV1/Conv2d_3_pointwise/weights/read/_74__cf__74:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6:0"
+  name: "Conv__230"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6:0"
+  input: "Const__216:0"
+  input: "MobilenetV1/Conv2d_4_depthwise/BatchNorm/beta/read/_75__cf__75:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6:0"
+  name: "MobilenetV1/MobilenetV1/Conv2d_4_depthwise/depthwise"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 128
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 2
+    ints: 2
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6:0"
+  input: "MobilenetV1/Conv2d_4_pointwise/weights/read/_84__cf__84:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6:0"
+  name: "Conv__232"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6:0"
+  input: "Const__215:0"
+  input: "MobilenetV1/Conv2d_5_depthwise/BatchNorm/beta/read/_85__cf__85:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6:0"
+  name: "MobilenetV1/MobilenetV1/Conv2d_5_depthwise/depthwise"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 256
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6:0"
+  input: "MobilenetV1/Conv2d_5_pointwise/weights/read/_94__cf__94:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6:0"
+  name: "Conv__234"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6:0"
+  input: "Const__214:0"
+  input: "MobilenetV1/Conv2d_6_depthwise/BatchNorm/beta/read/_95__cf__95:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6:0"
+  name: "MobilenetV1/MobilenetV1/Conv2d_6_depthwise/depthwise"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 256
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 2
+    ints: 2
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6:0"
+  input: "MobilenetV1/Conv2d_6_pointwise/weights/read/_104__cf__104:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6:0"
+  name: "Conv__236"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6:0"
+  input: "Const__213:0"
+  input: "MobilenetV1/Conv2d_7_depthwise/BatchNorm/beta/read/_105__cf__105:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6:0"
+  name: "MobilenetV1/MobilenetV1/Conv2d_7_depthwise/depthwise"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 512
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6:0"
+  input: "MobilenetV1/Conv2d_7_pointwise/weights/read/_114__cf__114:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6:0"
+  name: "Conv__238"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6:0"
+  input: "Const__212:0"
+  input: "MobilenetV1/Conv2d_8_depthwise/BatchNorm/beta/read/_115__cf__115:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6:0"
+  name: "MobilenetV1/MobilenetV1/Conv2d_8_depthwise/depthwise"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 512
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6:0"
+  input: "MobilenetV1/Conv2d_8_pointwise/weights/read/_124__cf__124:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6:0"
+  name: "Conv__240"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6:0"
+  input: "Const__211:0"
+  input: "MobilenetV1/Conv2d_9_depthwise/BatchNorm/beta/read/_125__cf__125:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6:0"
+  name: "MobilenetV1/MobilenetV1/Conv2d_9_depthwise/depthwise"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 512
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6:0"
+  input: "MobilenetV1/Conv2d_9_pointwise/weights/read/_134__cf__134:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6:0"
+  name: "Conv__242"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6:0"
+  input: "Const__223:0"
+  input: "MobilenetV1/Conv2d_10_depthwise/BatchNorm/beta/read/_5__cf__5:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6:0"
+  name: "MobilenetV1/MobilenetV1/Conv2d_10_depthwise/depthwise"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 512
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6:0"
+  input: "MobilenetV1/Conv2d_10_pointwise/weights/read/_14__cf__14:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6:0"
+  name: "Conv__244"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6:0"
+  input: "Const__222:0"
+  input: "MobilenetV1/Conv2d_11_depthwise/BatchNorm/beta/read/_15__cf__15:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6:0"
+  name: "MobilenetV1/MobilenetV1/Conv2d_11_depthwise/depthwise"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 512
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6:0"
+  input: "MobilenetV1/Conv2d_11_pointwise/weights/read/_24__cf__24:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6:0"
+  name: "Conv__246"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6:0"
+  input: "Const__221:0"
+  input: "MobilenetV1/Conv2d_12_depthwise/BatchNorm/beta/read/_25__cf__25:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6:0"
+  name: "MobilenetV1/MobilenetV1/Conv2d_12_depthwise/depthwise"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 512
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 2
+    ints: 2
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6:0"
+  input: "MobilenetV1/Conv2d_12_pointwise/weights/read/_34__cf__34:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6:0"
+  name: "Conv__248"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6:0"
+  input: "Const__220:0"
+  input: "MobilenetV1/Conv2d_13_depthwise/BatchNorm/beta/read/_35__cf__35:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6:0"
+  name: "MobilenetV1/MobilenetV1/Conv2d_13_depthwise/depthwise"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 1
+    ints: 1
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "group"
+    i: 1024
+  }
+  arg {
+    name: "kernels"
+    ints: 3
+    ints: 3
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6:0"
+  input: "MobilenetV1/Conv2d_13_pointwise/weights/read/_44__cf__44:0"
+  input: "MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Conv2D_bn_offset:0"
+  output: "MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6:0"
+  name: "Conv__250"
+  type: "Int8ConvRelu"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "fusion_type"
+    i: 2
+  }
+  arg {
+    name: "bound_max"
+    f: 6.0
+  }
+  arg {
+    name: "bound_min"
+    f: 0.0
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6:0"
+  output: "MobilenetV1/Logits/AvgPool_1a/AvgPool:0"
+  name: "MobilenetV1/Logits/AvgPool_1a/AvgPool"
+  type: "Int8AveragePool"
+  arg {
+    name: "kernels"
+    ints: 7
+    ints: 7
+  }
+  arg {
+    name: "strides"
+    ints: 2
+    ints: 2
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "Y_scale"
+    f: 0.0235294122248888
+  }
+  arg {
+    name: "Y_zero_point"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "MobilenetV1/Logits/AvgPool_1a/AvgPool:0"
+  input: "MobilenetV1/Logits/Conv2d_1c_1x1/weights/read/_136__cf__136:0"
+  input: "MobilenetV1/Logits/Conv2d_1c_1x1/biases/read/_135__cf__135:0"
+  output: "Conv__252:0"
+  name: "Conv__252"
+  type: "Int8Conv"
+  arg {
+    name: "pads"
+    ints: 0
+    ints: 0
+    ints: 0
+    ints: 0
+  }
+  arg {
+    name: "kernels"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "dilations"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "strides"
+    ints: 1
+    ints: 1
+  }
+  arg {
+    name: "training_mode"
+    i: 0
+  }
+  arg {
+    name: "order"
+    s: "NHWC"
+  }
+  device_option {
+  }
+  engine: "DNNLOWP"
+}
+op {
+  input: "Conv__252:0"
+  output: "MobilenetV1/Predictions/Softmax:0"
+  name: "MobilenetV1/Predictions/Softmax"
+  type: "Softmax"
+  arg {
+    name: "axis"
+    i: 1
+  }
+  device_option {
+  }
+}
+device_option {
+  device_type: 0
+  device_id: 0
+}
+external_input: "input:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/MobilenetV1/Conv2d_0/Conv2D_bn_offset:0"
+external_input: "MobilenetV1/Logits/Conv2d_1c_1x1/weights/read/_136__cf__136:0"
+external_input: "MobilenetV1/Logits/Conv2d_1c_1x1/biases/read/_135__cf__135:0"
+external_input: "MobilenetV1/Conv2d_9_pointwise/weights/read/_134__cf__134:0"
+external_input: "MobilenetV1/Conv2d_9_depthwise/BatchNorm/moving_variance/read/_128__cf__128:0"
+external_input: "MobilenetV1/Conv2d_9_depthwise/BatchNorm/moving_mean/read/_127__cf__127:0"
+external_input: "MobilenetV1/Conv2d_9_depthwise/BatchNorm/gamma/read/_126__cf__126:0"
+external_input: "MobilenetV1/Conv2d_9_depthwise/BatchNorm/beta/read/_125__cf__125:0"
+external_input: "MobilenetV1/Conv2d_8_pointwise/weights/read/_124__cf__124:0"
+external_input: "MobilenetV1/Conv2d_8_depthwise/BatchNorm/moving_variance/read/_118__cf__118:0"
+external_input: "MobilenetV1/Conv2d_8_depthwise/BatchNorm/moving_mean/read/_117__cf__117:0"
+external_input: "MobilenetV1/Conv2d_8_depthwise/BatchNorm/gamma/read/_116__cf__116:0"
+external_input: "MobilenetV1/Conv2d_8_depthwise/BatchNorm/beta/read/_115__cf__115:0"
+external_input: "MobilenetV1/Conv2d_7_pointwise/weights/read/_114__cf__114:0"
+external_input: "MobilenetV1/Conv2d_7_depthwise/BatchNorm/moving_variance/read/_108__cf__108:0"
+external_input: "MobilenetV1/Conv2d_7_depthwise/BatchNorm/moving_mean/read/_107__cf__107:0"
+external_input: "MobilenetV1/Conv2d_7_depthwise/BatchNorm/gamma/read/_106__cf__106:0"
+external_input: "MobilenetV1/Conv2d_7_depthwise/BatchNorm/beta/read/_105__cf__105:0"
+external_input: "MobilenetV1/Conv2d_6_pointwise/weights/read/_104__cf__104:0"
+external_input: "MobilenetV1/Conv2d_6_depthwise/BatchNorm/moving_variance/read/_98__cf__98:0"
+external_input: "MobilenetV1/Conv2d_6_depthwise/BatchNorm/moving_mean/read/_97__cf__97:0"
+external_input: "MobilenetV1/Conv2d_6_depthwise/BatchNorm/gamma/read/_96__cf__96:0"
+external_input: "MobilenetV1/Conv2d_6_depthwise/BatchNorm/beta/read/_95__cf__95:0"
+external_input: "MobilenetV1/Conv2d_5_pointwise/weights/read/_94__cf__94:0"
+external_input: "MobilenetV1/Conv2d_5_depthwise/BatchNorm/moving_variance/read/_88__cf__88:0"
+external_input: "MobilenetV1/Conv2d_5_depthwise/BatchNorm/moving_mean/read/_87__cf__87:0"
+external_input: "MobilenetV1/Conv2d_5_depthwise/BatchNorm/gamma/read/_86__cf__86:0"
+external_input: "MobilenetV1/Conv2d_5_depthwise/BatchNorm/beta/read/_85__cf__85:0"
+external_input: "MobilenetV1/Conv2d_4_pointwise/weights/read/_84__cf__84:0"
+external_input: "MobilenetV1/Conv2d_4_depthwise/BatchNorm/moving_variance/read/_78__cf__78:0"
+external_input: "MobilenetV1/Conv2d_4_depthwise/BatchNorm/moving_mean/read/_77__cf__77:0"
+external_input: "MobilenetV1/Conv2d_4_depthwise/BatchNorm/gamma/read/_76__cf__76:0"
+external_input: "MobilenetV1/Conv2d_4_depthwise/BatchNorm/beta/read/_75__cf__75:0"
+external_input: "MobilenetV1/Conv2d_3_pointwise/weights/read/_74__cf__74:0"
+external_input: "MobilenetV1/Conv2d_3_depthwise/BatchNorm/moving_variance/read/_68__cf__68:0"
+external_input: "MobilenetV1/Conv2d_3_depthwise/BatchNorm/moving_mean/read/_67__cf__67:0"
+external_input: "MobilenetV1/Conv2d_3_depthwise/BatchNorm/gamma/read/_66__cf__66:0"
+external_input: "MobilenetV1/Conv2d_3_depthwise/BatchNorm/beta/read/_65__cf__65:0"
+external_input: "MobilenetV1/Conv2d_2_pointwise/weights/read/_64__cf__64:0"
+external_input: "MobilenetV1/Conv2d_2_depthwise/BatchNorm/moving_variance/read/_58__cf__58:0"
+external_input: "MobilenetV1/Conv2d_2_depthwise/BatchNorm/moving_mean/read/_57__cf__57:0"
+external_input: "MobilenetV1/Conv2d_2_depthwise/BatchNorm/gamma/read/_56__cf__56:0"
+external_input: "MobilenetV1/Conv2d_2_depthwise/BatchNorm/beta/read/_55__cf__55:0"
+external_input: "MobilenetV1/Conv2d_1_pointwise/weights/read/_54__cf__54:0"
+external_input: "MobilenetV1/Conv2d_1_depthwise/BatchNorm/moving_variance/read/_48__cf__48:0"
+external_input: "MobilenetV1/Conv2d_1_depthwise/BatchNorm/moving_mean/read/_47__cf__47:0"
+external_input: "MobilenetV1/Conv2d_1_depthwise/BatchNorm/gamma/read/_46__cf__46:0"
+external_input: "MobilenetV1/Conv2d_1_depthwise/BatchNorm/beta/read/_45__cf__45:0"
+external_input: "MobilenetV1/Conv2d_13_pointwise/weights/read/_44__cf__44:0"
+external_input: "MobilenetV1/Conv2d_13_depthwise/BatchNorm/moving_variance/read/_38__cf__38:0"
+external_input: "MobilenetV1/Conv2d_13_depthwise/BatchNorm/moving_mean/read/_37__cf__37:0"
+external_input: "MobilenetV1/Conv2d_13_depthwise/BatchNorm/gamma/read/_36__cf__36:0"
+external_input: "MobilenetV1/Conv2d_13_depthwise/BatchNorm/beta/read/_35__cf__35:0"
+external_input: "MobilenetV1/Conv2d_12_pointwise/weights/read/_34__cf__34:0"
+external_input: "MobilenetV1/Conv2d_12_depthwise/BatchNorm/moving_variance/read/_28__cf__28:0"
+external_input: "MobilenetV1/Conv2d_12_depthwise/BatchNorm/moving_mean/read/_27__cf__27:0"
+external_input: "MobilenetV1/Conv2d_12_depthwise/BatchNorm/gamma/read/_26__cf__26:0"
+external_input: "MobilenetV1/Conv2d_12_depthwise/BatchNorm/beta/read/_25__cf__25:0"
+external_input: "MobilenetV1/Conv2d_11_pointwise/weights/read/_24__cf__24:0"
+external_input: "MobilenetV1/Conv2d_11_depthwise/BatchNorm/moving_variance/read/_18__cf__18:0"
+external_input: "MobilenetV1/Conv2d_11_depthwise/BatchNorm/moving_mean/read/_17__cf__17:0"
+external_input: "MobilenetV1/Conv2d_11_depthwise/BatchNorm/gamma/read/_16__cf__16:0"
+external_input: "MobilenetV1/Conv2d_11_depthwise/BatchNorm/beta/read/_15__cf__15:0"
+external_input: "MobilenetV1/Conv2d_10_pointwise/weights/read/_14__cf__14:0"
+external_input: "MobilenetV1/Conv2d_10_depthwise/BatchNorm/moving_variance/read/_8__cf__8:0"
+external_input: "MobilenetV1/Conv2d_10_depthwise/BatchNorm/moving_mean/read/_7__cf__7:0"
+external_input: "MobilenetV1/Conv2d_10_depthwise/BatchNorm/gamma/read/_6__cf__6:0"
+external_input: "MobilenetV1/Conv2d_10_depthwise/BatchNorm/beta/read/_5__cf__5:0"
+external_input: "MobilenetV1/Conv2d_0/weights/read/_4__cf__4:0"
+external_input: "Const__223:0"
+external_input: "Const__222:0"
+external_input: "Const__221:0"
+external_input: "Const__220:0"
+external_input: "Const__219:0"
+external_input: "Const__218:0"
+external_input: "Const__217:0"
+external_input: "Const__216:0"
+external_input: "Const__215:0"
+external_input: "Const__214:0"
+external_input: "Const__213:0"
+external_input: "Const__212:0"
+external_input: "Const__211:0"
+external_output: "MobilenetV1/Predictions/Softmax:0"
