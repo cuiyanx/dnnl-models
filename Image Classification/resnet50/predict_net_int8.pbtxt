@@ -43,7 +43,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.09865859895944595
+    f: 0.12335912883281708
   }
   arg {
     name: "Y_zero_point"
@@ -85,7 +85,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.09865859895944595
+    f: 0.12335912883281708
   }
   arg {
     name: "Y_zero_point"
@@ -131,7 +131,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.042075544595718384
+    f: 0.042168132960796356
   }
   arg {
     name: "Y_zero_point"
@@ -173,7 +173,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.18855658173561096
+    f: 0.25225821137428284
   }
   arg {
     name: "Y_zero_point"
@@ -223,7 +223,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.03835303336381912
+    f: 0.03880836442112923
   }
   arg {
     name: "Y_zero_point"
@@ -270,7 +270,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.05788037180900574
+    f: 0.09811476618051529
   }
   arg {
     name: "Y_zero_point"
@@ -316,7 +316,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.058143313974142075
+    f: 0.06735234707593918
   }
   arg {
     name: "Y_zero_point"
@@ -366,7 +366,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.049274198710918427
+    f: 0.06627663969993591
   }
   arg {
     name: "Y_zero_point"
@@ -413,7 +413,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.05641582980751991
+    f: 0.09995575249195099
   }
   arg {
     name: "Y_zero_point"
@@ -459,7 +459,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.043160539120435715
+    f: 0.059353601187467575
   }
   arg {
     name: "Y_zero_point"
@@ -509,7 +509,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.044370315968990326
+    f: 0.05133499205112457
   }
   arg {
     name: "Y_zero_point"
@@ -556,7 +556,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.07994069159030914
+    f: 0.09736980497837067
   }
   arg {
     name: "Y_zero_point"
@@ -598,7 +598,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.1733430027961731
+    f: 0.2938871383666992
   }
   arg {
     name: "Y_zero_point"
@@ -741,7 +741,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.1419733613729477
+    f: 0.17616960406303406
   }
   arg {
     name: "Y_zero_point"
@@ -787,7 +787,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.03639813885092735
+    f: 0.05669005215167999
   }
   arg {
     name: "Y_zero_point"
@@ -837,7 +837,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.03776928782463074
+    f: 0.06336457282304764
   }
   arg {
     name: "Y_zero_point"
@@ -884,7 +884,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.13644269108772278
+    f: 0.16778536140918732
   }
   arg {
     name: "Y_zero_point"
@@ -930,7 +930,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.04674363136291504
+    f: 0.05797482654452324
   }
   arg {
     name: "Y_zero_point"
@@ -1027,7 +1027,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.13911961019039154
+    f: 0.16610392928123474
   }
   arg {
     name: "Y_zero_point"
@@ -1123,7 +1123,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.05635249987244606
+    f: 0.07263236492872238
   }
   arg {
     name: "Y_zero_point"
@@ -1170,7 +1170,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.1161675676703453
+    f: 0.13565710186958313
   }
   arg {
     name: "Y_zero_point"
@@ -1216,7 +1216,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.0671316459774971
+    f: 0.07249642163515091
   }
   arg {
     name: "Y_zero_point"
@@ -1266,7 +1266,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.06377562135457993
+    f: 0.08616359531879425
   }
   arg {
     name: "Y_zero_point"
@@ -1308,7 +1308,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.19430755078792572
+    f: 0.2515363097190857
   }
   arg {
     name: "Y_zero_point"
@@ -1355,7 +1355,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.10565650463104248
+    f: 0.13063400983810425
   }
   arg {
     name: "Y_zero_point"
@@ -1408,7 +1408,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.06288613379001617
+    f: 0.0841108039021492
   }
   arg {
     name: "Y_zero_point"
@@ -1458,7 +1458,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.03081331215798855
+    f: 0.04204867407679558
   }
   arg {
     name: "Y_zero_point"
@@ -1512,7 +1512,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.10097530484199524
+    f: 0.11868206411600113
   }
   arg {
     name: "Y_zero_point"
@@ -1565,7 +1565,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.05244685709476471
+    f: 0.069479800760746
   }
   arg {
     name: "Y_zero_point"
@@ -1615,7 +1615,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.04157248139381409
+    f: 0.08950219303369522
   }
   arg {
     name: "Y_zero_point"
@@ -1669,7 +1669,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.09938018023967743
+    f: 0.11774330586194992
   }
   arg {
     name: "Y_zero_point"
@@ -1715,7 +1715,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.04994002729654312
+    f: 0.1275351643562317
   }
   arg {
     name: "Y_zero_point"
@@ -1765,7 +1765,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.08419138938188553
+    f: 0.3019866347312927
   }
   arg {
     name: "Y_zero_point"
@@ -1812,7 +1812,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.08596619218587875
+    f: 0.16415077447891235
   }
   arg {
     name: "Y_zero_point"
@@ -1858,7 +1858,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.03933154046535492
+    f: 0.10510389506816864
   }
   arg {
     name: "Y_zero_point"
@@ -1908,7 +1908,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.04535293951630592
+    f: 0.2553398311138153
   }
   arg {
     name: "Y_zero_point"
@@ -1955,7 +1955,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.08887194842100143
+    f: 0.16495776176452637
   }
   arg {
     name: "Y_zero_point"
@@ -2001,7 +2001,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.04096955060958862
+    f: 0.0649208202958107
   }
   arg {
     name: "Y_zero_point"
@@ -2051,7 +2051,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.03896638751029968
+    f: 0.11550085246562958
   }
   arg {
     name: "Y_zero_point"
@@ -2098,7 +2098,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.08397740870714188
+    f: 0.13436301052570343
   }
   arg {
     name: "Y_zero_point"
@@ -2144,7 +2144,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.05572936683893204
+    f: 0.06363344192504883
   }
   arg {
     name: "Y_zero_point"
@@ -2194,7 +2194,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.049778297543525696
+    f: 0.06644731014966965
   }
   arg {
     name: "Y_zero_point"
@@ -2236,7 +2236,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.3709523379802704
+    f: 0.5611667037010193
   }
   arg {
     name: "Y_zero_point"
@@ -2283,7 +2283,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.2152969092130661
+    f: 0.28264912962913513
   }
   arg {
     name: "Y_zero_point"
@@ -2329,7 +2329,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.03978722542524338
+    f: 0.054554086178541183
   }
   arg {
     name: "Y_zero_point"
@@ -2379,7 +2379,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.025364071130752563
+    f: 0.04026133939623833
   }
   arg {
     name: "Y_zero_point"
@@ -2426,7 +2426,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.20381397008895874
+    f: 0.3044634461402893
   }
   arg {
     name: "Y_zero_point"
@@ -2472,7 +2472,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.06133277341723442
+    f: 0.08017650991678238
   }
   arg {
     name: "Y_zero_point"
@@ -2522,7 +2522,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.05319257453083992
+    f: 0.056684114038944244
   }
   arg {
     name: "Y_zero_point"
@@ -2569,7 +2569,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.3898368775844574
+    f: 0.4779973328113556
   }
   arg {
     name: "Y_zero_point"
@@ -2602,7 +2602,7 @@ op {
   }
   arg {
     name: "Y_scale"
-    f: 0.3898368775844574
+    f: 0.4779973328113556
   }
   arg {
     name: "Y_zero_point"
