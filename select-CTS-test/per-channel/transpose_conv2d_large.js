@@ -27,7 +27,7 @@ describe('CTS', function() {
     model.addOperand(type11);
     let op2 = operandIndex++;
     model.addOperand(type12);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=new Float32Array([0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5])});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5])});
     let op3 = operandIndex++;
     model.addOperand(type13);
     let shape = operandIndex++;
