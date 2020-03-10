@@ -27,7 +27,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type35);
-    model.setOperandSymmPerChannelQuantParams(type35, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type36);
     let shape = operandIndex++;
@@ -99,7 +99,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type38);
-    model.setOperandSymmPerChannelQuantParams(type38, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type39);
     let shape = operandIndex++;
@@ -170,7 +170,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type40);
-    model.setOperandSymmPerChannelQuantParams(type40, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type41);
     let shape = operandIndex++;
@@ -242,7 +242,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type42);
-    model.setOperandSymmPerChannelQuantParams(type42, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type43);
     let shape = operandIndex++;
@@ -313,7 +313,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type35);
-    model.setOperandSymmPerChannelQuantParams(type35, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type36);
     let shape = operandIndex++;
@@ -385,7 +385,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type50);
-    model.setOperandSymmPerChannelQuantParams(type50, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type51);
     let shape = operandIndex++;
@@ -456,7 +456,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type40);
-    model.setOperandSymmPerChannelQuantParams(type40, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type41);
     let shape = operandIndex++;
@@ -528,7 +528,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type52);
-    model.setOperandSymmPerChannelQuantParams(type52, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type53);
     let shape = operandIndex++;
@@ -599,7 +599,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type35);
-    model.setOperandSymmPerChannelQuantParams(type35, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type36);
     let shape = operandIndex++;
@@ -671,7 +671,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type54);
-    model.setOperandSymmPerChannelQuantParams(type54, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type55);
     let shape = operandIndex++;
@@ -742,7 +742,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type40);
-    model.setOperandSymmPerChannelQuantParams(type40, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type41);
     let shape = operandIndex++;
@@ -814,7 +814,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type56);
-    model.setOperandSymmPerChannelQuantParams(type56, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type57);
     let shape = operandIndex++;
@@ -885,7 +885,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type35);
-    model.setOperandSymmPerChannelQuantParams(type35, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type36);
     let shape = operandIndex++;
@@ -957,7 +957,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type58);
-    model.setOperandSymmPerChannelQuantParams(type58, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type59);
     let shape = operandIndex++;
@@ -1028,7 +1028,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type40);
-    model.setOperandSymmPerChannelQuantParams(type40, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type41);
     let shape = operandIndex++;
@@ -1100,7 +1100,7 @@ describe('CTS', function() {
     model.addOperand(type34);
     let op2 = operandIndex++;
     model.addOperand(type60);
-    model.setOperandSymmPerChannelQuantParams(type60, {channelDim=0, scales=[0.25, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25, 0.5]});
     let op3 = operandIndex++;
     model.addOperand(type61);
     let shape = operandIndex++;
@@ -1171,7 +1171,7 @@ describe('CTS', function() {
     model.addOperand(type88);
     let op21 = operandIndex++;
     model.addOperand(type92);
-    model.setOperandSymmPerChannelQuantParams(type92, {channelDim=0, scales=[0.25]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25]});
     let op31 = operandIndex++;
     model.addOperand(type93);
     let shape1 = operandIndex++;
@@ -1243,7 +1243,7 @@ describe('CTS', function() {
     model.addOperand(type88);
     let op21 = operandIndex++;
     model.addOperand(type94);
-    model.setOperandSymmPerChannelQuantParams(type94, {channelDim=0, scales=[0.25]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.25]});
     let op31 = operandIndex++;
     model.addOperand(type95);
     let shape1 = operandIndex++;
