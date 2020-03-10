@@ -13,7 +13,7 @@ describe('CTS', function() {
 
     let type11 = {type: nn.TENSOR_QUANT8_ASYMM, dimensions: [25, 1, 1, 1], scale: 0.25, zeroPoint: 100};
     let type11_length = product(type11.dimensions);
-    let type12 = {type: nn.TENSOR_QUANT8_SYMM_PER_CHANNEL, dimensions: [16, 1, 1, 1], scale: 0.0, zeroPoint: 0};
+    let type12 = {type: nn.TENSOR_QUANT8_SYMM_PER_CHANNEL, dimensions: [16, 1, 1, 1]};
     let type12_length = product(type12.dimensions);
     let type13 = {type: nn.TENSOR_INT32, dimensions: [16], scale: 0.0, zeroPoint: 0};
     let type13_length = product(type13.dimensions);
@@ -27,7 +27,7 @@ describe('CTS', function() {
     model.addOperand(type11);
     let op2 = operandIndex++;
     model.addOperand(type12);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=[0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]});
+    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim=0, scales=new Float32Array([0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5])});
     let op3 = operandIndex++;
     model.addOperand(type13);
     let shape = operandIndex++;
@@ -43,7 +43,7 @@ describe('CTS', function() {
     let op4 = operandIndex++;
     model.addOperand(type14);
 
-    model.setOperandValue(op2, new Uint8Array([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]));
+    model.setOperandValue(op2, new Int8Array([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]));
     model.setOperandValue(op3, new Int32Array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));
     model.setOperandValue(shape, new Int32Array([25, 32, 32, 16]));
     model.setOperandValue(param, new Int32Array([1]));
