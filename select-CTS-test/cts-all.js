@@ -26,7 +26,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type0);
     let op2 = operandIndex++;
     model.addOperand(type1);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.5, 0.75, 1.0])});
+    model.setOperandSymmPerChannelQuantParams(op2, {channelDim: 0, scales: new Float32Array([0.5, 0.75, 1.0])});
     let op3 = operandIndex++;
     model.addOperand(type2);
     let param = operandIndex++;
@@ -102,7 +102,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type0);
     let op2 = operandIndex++;
     model.addOperand(type18);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.5, 0.75, 1.0])});
+    model.setOperandSymmPerChannelQuantParams(op2, {channelDim: 0, scales: new Float32Array([0.5, 0.75, 1.0])});
     let op3 = operandIndex++;
     model.addOperand(type2);
     let param = operandIndex++;
@@ -177,7 +177,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type0);
     let op21 = operandIndex++;
     model.addOperand(type6);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.5, 0.75, 1.0])});
+    model.setOperandSymmPerChannelQuantParams(op21, {channelDim: 0, scales: new Float32Array([0.5, 0.75, 1.0])});
     let op31 = operandIndex++;
     model.addOperand(type2);
     let param7 = operandIndex++;
@@ -253,7 +253,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type0);
     let op21 = operandIndex++;
     model.addOperand(type19);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.5, 0.75, 1.0])});
+    model.setOperandSymmPerChannelQuantParams(op21, {channelDim: 0, scales: new Float32Array([0.5, 0.75, 1.0])});
     let op31 = operandIndex++;
     model.addOperand(type2);
     let param7 = operandIndex++;
@@ -835,7 +835,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type32);
     let op2 = operandIndex++;
     model.addOperand(type35);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.125])});
+    model.setOperandSymmPerChannelQuantParams(op2, {channelDim: 0, scales: new Float32Array([0.125])});
     let op3 = operandIndex++;
     model.addOperand(type36);
     let param = operandIndex++;
@@ -911,7 +911,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type32);
     let op2 = operandIndex++;
     model.addOperand(type35);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.125])});
+    model.setOperandSymmPerChannelQuantParams(op2, {channelDim: 0, scales: new Float32Array([0.125])});
     let op3 = operandIndex++;
     model.addOperand(type36);
     let param = operandIndex++;
@@ -986,7 +986,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type46);
     let op21 = operandIndex++;
     model.addOperand(type50);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.5])});
+    model.setOperandSymmPerChannelQuantParams(op21, {channelDim: 0, scales: new Float32Array([0.5])});
     let op31 = operandIndex++;
     model.addOperand(type51);
     let param7 = operandIndex++;
@@ -1053,7 +1053,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type46);
     let op21 = operandIndex++;
     model.addOperand(type50);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.5])});
+    model.setOperandSymmPerChannelQuantParams(op21, {channelDim: 0, scales: new Float32Array([0.5])});
     let op31 = operandIndex++;
     model.addOperand(type51);
     let param7 = operandIndex++;
@@ -1117,7 +1117,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type57);
     let op22 = operandIndex++;
     model.addOperand(type60);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.5, 0.4, 0.3])});
+    model.setOperandSymmPerChannelQuantParams(op22, {channelDim: 0, scales: new Float32Array([0.5, 0.4, 0.3])});
     let op32 = operandIndex++;
     model.addOperand(type61);
     let param11 = operandIndex++;
@@ -1191,7 +1191,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type57);
     let op22 = operandIndex++;
     model.addOperand(type60);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.5, 0.4, 0.3])});
+    model.setOperandSymmPerChannelQuantParams(op22, {channelDim: 0, scales: new Float32Array([0.5, 0.4, 0.3])});
     let op32 = operandIndex++;
     model.addOperand(type61);
     let param11 = operandIndex++;
@@ -1266,7 +1266,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type68);
     let op23 = operandIndex++;
     model.addOperand(type71);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.5, 1.0, 0.5])});
+    model.setOperandSymmPerChannelQuantParams(op23, {channelDim: 0, scales: new Float32Array([0.5, 1.0, 0.5])});
     let op33 = operandIndex++;
     model.addOperand(type72);
     let param18 = operandIndex++;
@@ -1338,7 +1338,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type73);
     let op23 = operandIndex++;
     model.addOperand(type74);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.5, 1.0, 1.005])});
+    model.setOperandSymmPerChannelQuantParams(op23, {channelDim: 0, scales: new Float32Array([0.5, 1.0, 1.005])});
     let op33 = operandIndex++;
     model.addOperand(type75);
     let param18 = operandIndex++;
@@ -1414,7 +1414,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type68);
     let op23 = operandIndex++;
     model.addOperand(type71);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.5, 1.0, 0.5])});
+    model.setOperandSymmPerChannelQuantParams(op23, {channelDim: 0, scales: new Float32Array([0.5, 1.0, 0.5])});
     let op33 = operandIndex++;
     model.addOperand(type72);
     let param18 = operandIndex++;
@@ -1489,7 +1489,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type73);
     let op23 = operandIndex++;
     model.addOperand(type74);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 0, scales: new Float32Array([0.5, 1.0, 1.005])});
+    model.setOperandSymmPerChannelQuantParams(op23, {channelDim: 0, scales: new Float32Array([0.5, 1.0, 1.005])});
     let op33 = operandIndex++;
     model.addOperand(type75);
     let param18 = operandIndex++;
@@ -1565,7 +1565,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type0);
     let op2 = operandIndex++;
     model.addOperand(type1);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([0.5, 0.5])});
+    model.setOperandSymmPerChannelQuantParams(op2, {channelDim: 3, scales: new Float32Array([0.5, 0.5])});
     let op3 = operandIndex++;
     model.addOperand(type2);
     let param = operandIndex++;
@@ -1644,7 +1644,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type0);
     let op2 = operandIndex++;
     model.addOperand(type11);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([0.5, 0.5])});
+    model.setOperandSymmPerChannelQuantParams(op2, {channelDim: 3, scales: new Float32Array([0.5, 0.5])});
     let op3 = operandIndex++;
     model.addOperand(type2);
     let param = operandIndex++;
@@ -1722,7 +1722,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type5);
     let op21 = operandIndex++;
     model.addOperand(type6);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([1.0, 0.5, 1.0, 0.5])});
+    model.setOperandSymmPerChannelQuantParams(op21, {channelDim: 3, scales: new Float32Array([1.0, 0.5, 1.0, 0.5])});
     let op31 = operandIndex++;
     model.addOperand(type7);
     let param8 = operandIndex++;
@@ -1801,7 +1801,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type5);
     let op21 = operandIndex++;
     model.addOperand(type12);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([1.0, 0.5, 1.0, 0.5])});
+    model.setOperandSymmPerChannelQuantParams(op21, {channelDim: 3, scales: new Float32Array([1.0, 0.5, 1.0, 0.5])});
     let op31 = operandIndex++;
     model.addOperand(type7);
     let param8 = operandIndex++;
@@ -1879,7 +1879,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type5);
     let op22 = operandIndex++;
     model.addOperand(type10);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([1.0, 0.5, 1.0, 0.5])});
+    model.setOperandSymmPerChannelQuantParams(op22, {channelDim: 3, scales: new Float32Array([1.0, 0.5, 1.0, 0.5])});
     let op32 = operandIndex++;
     model.addOperand(type7);
     let param16 = operandIndex++;
@@ -1958,7 +1958,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type5);
     let op22 = operandIndex++;
     model.addOperand(type13);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([1.0, 0.5, 1.0, 0.5])});
+    model.setOperandSymmPerChannelQuantParams(op22, {channelDim: 3, scales: new Float32Array([1.0, 0.5, 1.0, 0.5])});
     let op32 = operandIndex++;
     model.addOperand(type7);
     let param16 = operandIndex++;
@@ -2269,7 +2269,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type18);
     let op2 = operandIndex++;
     model.addOperand(type19);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([0.01, 0.005, 0.01, 0.005])});
+    model.setOperandSymmPerChannelQuantParams(op2, {channelDim: 3, scales: new Float32Array([0.01, 0.005, 0.01, 0.005])});
     let op3 = operandIndex++;
     model.addOperand(type20);
     let param = operandIndex++;
@@ -2346,7 +2346,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type18);
     let op2 = operandIndex++;
     model.addOperand(type22);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([0.01, 0.005, 0.01, 0.005])});
+    model.setOperandSymmPerChannelQuantParams(op2, {channelDim: 3, scales: new Float32Array([0.01, 0.005, 0.01, 0.005])});
     let op3 = operandIndex++;
     model.addOperand(type23);
     let param = operandIndex++;
@@ -2425,7 +2425,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type18);
     let op2 = operandIndex++;
     model.addOperand(type19);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([0.01, 0.005, 0.01, 0.005])});
+    model.setOperandSymmPerChannelQuantParams(op2, {channelDim: 3, scales: new Float32Array([0.01, 0.005, 0.01, 0.005])});
     let op3 = operandIndex++;
     model.addOperand(type20);
     let param = operandIndex++;
@@ -2505,7 +2505,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type18);
     let op2 = operandIndex++;
     model.addOperand(type22);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([0.01, 0.005, 0.01, 0.005])});
+    model.setOperandSymmPerChannelQuantParams(op2, {channelDim: 3, scales: new Float32Array([0.01, 0.005, 0.01, 0.005])});
     let op3 = operandIndex++;
     model.addOperand(type23);
     let param = operandIndex++;
@@ -2583,7 +2583,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type36);
     let op21 = operandIndex++;
     model.addOperand(type40);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([0.5, 0.25, 0.5, 0.25])});
+    model.setOperandSymmPerChannelQuantParams(op21, {channelDim: 3, scales: new Float32Array([0.5, 0.25, 0.5, 0.25])});
     let op31 = operandIndex++;
     model.addOperand(type41);
     let param8 = operandIndex++;
@@ -2653,7 +2653,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type36);
     let op21 = operandIndex++;
     model.addOperand(type40);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([0.5, 0.25, 0.5, 0.25])});
+    model.setOperandSymmPerChannelQuantParams(op21, {channelDim: 3, scales: new Float32Array([0.5, 0.25, 0.5, 0.25])});
     let op31 = operandIndex++;
     model.addOperand(type41);
     let param8 = operandIndex++;
@@ -2722,7 +2722,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type55);
     let op22 = operandIndex++;
     model.addOperand(type56);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([0.125, 0.25])});
+    model.setOperandSymmPerChannelQuantParams(op22, {channelDim: 3, scales: new Float32Array([0.125, 0.25])});
     let op32 = operandIndex++;
     model.addOperand(type57);
     let param13 = operandIndex++;
@@ -2801,7 +2801,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type55);
     let op22 = operandIndex++;
     model.addOperand(type56);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([0.125, 0.25])});
+    model.setOperandSymmPerChannelQuantParams(op22, {channelDim: 3, scales: new Float32Array([0.125, 0.25])});
     let op32 = operandIndex++;
     model.addOperand(type57);
     let param13 = operandIndex++;
@@ -2879,7 +2879,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type37);
     let op23 = operandIndex++;
     model.addOperand(type65);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([1.0, 2.0, 1.0, 1.0])});
+    model.setOperandSymmPerChannelQuantParams(op23, {channelDim: 3, scales: new Float32Array([1.0, 2.0, 1.0, 1.0])});
     let op33 = operandIndex++;
     model.addOperand(type66);
     let param21 = operandIndex++;
@@ -2958,7 +2958,7 @@ describe('CTS Supplement Test', function() {
     model.addOperand(type37);
     let op23 = operandIndex++;
     model.addOperand(type65);
-    model.setOperandSymmPerChannelQuantParams(operandIndex++, {channelDim: 3, scales: new Float32Array([1.0, 2.0, 1.0, 1.0])});
+    model.setOperandSymmPerChannelQuantParams(op23, {channelDim: 3, scales: new Float32Array([1.0, 2.0, 1.0, 1.0])});
     let op33 = operandIndex++;
     model.addOperand(type66);
     let param21 = operandIndex++;
