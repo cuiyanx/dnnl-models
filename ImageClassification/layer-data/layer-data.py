@@ -11,13 +11,14 @@ from matplotlib import pyplot
 import pylab
 import os
 from caffe2.python import core, workspace, models, brew, model_helper
+import google.protobuf.text_format as ptxt
 import operator
 print("Required modules imported.")
 
 CAFFE_MODELS = "/home/neusoft/cuiyan/work/dnnl-models/ImageClassification/model"
 IMAGE_LOCATION = "/home/neusoft/cuiyan/work/dnnl-models/ImageClassification/layer-data/" \
 "ILSVRC2012_val_00033000.JPEG"
-MODEL = ["resnet50_quantized", "init_net.pb", "predict_net.pb", 224]
+MODEL = ["resnet50_quantized", "resnet50_quantized_init_net.pb", "resnet50_quantized_predict_net.pb", 224]
 codes = "/home/neusoft/cuiyan/work/dnnl-models/ImageClassification/layer-data/synset.txt"
 MEAN_FILE = "/home/neusoft/cuiyan/work/dnnl-models/ImageClassification/layer-data/ilsvrc_2012_mean.npy"
 print("Config set!")
@@ -115,13 +116,33 @@ img = img[np.newaxis, :, :, :].astype(np.float32)
 
 print("NCHW image (ready to be used as input): ", img.shape)
 
-with open(INIT_NET, "rb") as f:
-    init_net = f.read()
-with open(PREDICT_NET, "rb") as f:
-    predict_net = f.read()
+workspace.ResetWorkspace()
+device_opts = core.DeviceOption(caffe2_pb2.CPU, 0)
+# device_opts = core.DeviceOption(caffe2_pb2.CUDA, 0)
+# device_opts = core.DeviceOption(caffe2_pb2.IDEEP, 0)
 
+with open(INIT_NET, "rb") as f:
+    # init_def = ptxt.Parse(f.read(), caffe2_pb2.NetDef())
+    init_def = caffe2_pb2.NetDef()
+    init_def.ParseFromString(f.read())
+    init_def.device_option.CopyFrom(device_opts)
+with open(PREDICT_NET, "rb") as f:
+    # predict_def = ptxt.Parse(f.read(), caffe2_pb2.NetDef())
+    predict_def = caffe2_pb2.NetDef()
+    predict_def.ParseFromString(f.read())
+    predict_def.device_option.CopyFrom(device_opts)
+
+workspace.RunNetOnce(init_def)
+workspace.FeedBlob(predict_def.op[0].input[0], img, device_opts)
+workspace.CreateNet(predict_def)
+workspace.RunNet(predict_def.name, 1)
+results = workspace.FetchBlob(predict_def.op[-1].output[0])
+
+'''
 p = workspace.Predictor(init_net, predict_net)
 results = p.run({'data': img})
+'''
+
 results = np.asarray(results)
 print("results shape: ", results.shape)
 
