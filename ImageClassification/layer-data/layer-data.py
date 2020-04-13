@@ -15,12 +15,11 @@ import google.protobuf.text_format as ptxt
 import operator
 print("Required modules imported.")
 
-CAFFE_MODELS = "/home/neusoft/cuiyan/work/dnnl-models/ImageClassification/model"
-IMAGE_LOCATION = "/home/neusoft/cuiyan/work/dnnl-models/ImageClassification/layer-data/" \
-"ILSVRC2012_val_00033000.JPEG"
-MODEL = ["resnet50_quantized", "resnet50_quantized_init_net.pb", "resnet50_quantized_predict_net.pb", 224]
-codes = "/home/neusoft/cuiyan/work/dnnl-models/ImageClassification/layer-data/synset.txt"
-MEAN_FILE = "/home/neusoft/cuiyan/work/dnnl-models/ImageClassification/layer-data/ilsvrc_2012_mean.npy"
+CAFFE_MODELS = "../model"
+IMAGE_LOCATION = "./ILSVRC2012_val_00033000.JPEG"
+MODEL = ["squeezenet", "init_net.pb", "predict_net.pb", 224]
+codes = "./synset.txt"
+MEAN_FILE = "./ilsvrc_2012_mean.npy"
 print("Config set!")
 
 CAFFE_MODELS = os.path.expanduser(CAFFE_MODELS)
